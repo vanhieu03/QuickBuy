@@ -1,0 +1,30 @@
+my-ecommerce/
+├── public/
+│   └── assets/             # Ảnh sản phẩm, logo, v.v.
+├── src/
+│   ├── assets/             # Hình ảnh, icons, fonts dùng trong giao diện
+│   ├── components/         # Các component dùng lại nhiều lần (Navbar, Button, Modal, v.v.)
+│   ├── layouts/            # Layout tổng thể (MainLayout, AdminLayout,...)
+│   ├── pages/              # Các trang chính (Home, ProductDetail, Cart, Checkout, etc.)
+│   │   ├── Home/
+│   │   ├── Product/
+│   │   ├── Cart/
+│   │   ├── Checkout/
+│   │   ├── Profile/
+│   │   └── Admin/
+│   ├── features/           # Các module chức năng theo slice (Redux hoặc context)
+│   │   ├── cart/
+│   │   ├── products/
+│   │   ├── auth/
+│   │   └── orders/
+│   ├── routes/             # Định nghĩa đường dẫn các trang
+│   ├── services/           # Gọi API (axios instance, API functions)
+│   ├── utils/              # Hàm tiện ích (format tiền tệ, validate form, v.v.)
+│   ├── hooks/              # Custom hooks (useCart, useAuth, useFetch,...)
+│   ├── App.jsx             # Thành phần gốc
+│   └── main.jsx            # Điểm bắt đầu của React
+├── .env                    # Biến môi trường (API URL, KEY...)
+├── .gitignore
+├── index.html              # HTML gốc
+├── package.json
+└── vite.config.js
