@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import Home from "./assets/pages/Home";
+import Banner from "./assets/components/Banner";
 import Products from "./assets/components/Products";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <Home />
+      <Banner />
       {/* <Products data ={products}/> */}
     </>
   )
