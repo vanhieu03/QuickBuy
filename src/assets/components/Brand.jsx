@@ -17,33 +17,30 @@ const responsive = {
     },
     tablet: {
         breakpoint: { max: 1280, min: 684 },
-        items: 2
+        items: 3
     },
     mobile: {
         breakpoint: { max: 684, min: 0 },
         items: 2
     }
 };
+const images = [
+    { src: img1, alt: "img1" },
+    { src: img2, alt: "img2" },
+    { src: img4, alt: "img3" },
+    { src: img5, alt: "img4" },
+    { src: img3, alt: "img5" },
+];
 
 const Brand = () => {
     return (
         <div className='bg-black'>
             <Carousel responsive={responsive} className='max-w-xl lg:max-w-7xl mx-auto'>
-                <div className='py-10'>
-                    <img src={img1} alt="img1" className='w-[144px] h-[40px]'/>
-                </div>
-                <div className=' py-10'>
-                    <img src={img2} alt="img2" className='w-[144px] h-[40px]'/>
-                </div>
-                <div className='py-10'>
-                    <img src={img4} alt="img3" className='w-[144px] h-[40px]'/>
-                </div>
-                <div className='py-10'>
-                    <img src={img5} alt="img4" className='w-[144px] h-[40px]'/>
-                </div>
-                <div className='py-10'>
-                    <img src={img3} alt="img5" className='w-[144px] h-[40px]'/>
-                </div>
+                {images.map((img, index) => (
+                    <div key={index} className='py-10 flex justify-center'>
+                        <img src={img.src} alt={img.alt} className='w-[144px] h-[40px]' />
+                    </div>
+                ))}
             </Carousel>
         </div>
     )

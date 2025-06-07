@@ -2,7 +2,7 @@ import banner from '/woman.webp'
 import { FaPlus } from "react-icons/fa";
 const Banner = () => {
     return (
-        <div className="bg-[#F2F0F1] px-4">
+        <div className="bg-[#F2F0F1] px-4 pt-[140px]">
             <div className="max-w-xl lg:max-w-7xl mx-auto lg:flex items-center space-x-2">
                 {/* Banner text */}
                 <div className="text-black lg:w-1/2 lg:mt-0 pt-4">

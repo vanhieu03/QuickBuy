@@ -12,11 +12,40 @@ my-ecommerce/
 │   │   ├── Checkout/
 │   │   ├── Profile/
 │   │   └── Admin/
-│   ├── features/           # Các module chức năng theo slice (Redux hoặc context)
-│   │   ├── cart/
-│   │   ├── products/
-│   │   ├── auth/
-│   │   └── orders/
+├── features/
+│   ├── auth/                # Quản lý đăng nhập, đăng ký, xác thực
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── authService.js
+│   │   ├── authSlice.js     # Nếu dùng Redux Toolkit
+│   │   └── useAuth.js       # Custom hook cho auth
+│
+│   ├── products/            # Quản lý sản phẩm
+│   │   ├── ProductList.jsx
+│   │   ├── ProductDetail.jsx
+│   │   ├── productService.js
+│   │   ├── productSlice.js
+│   │   └── productUtils.js  # Hàm xử lý logic, format dữ liệu sản phẩm
+│
+│   ├── cart/                # Giỏ hàng
+│   │   ├── Cart.jsx
+│   │   ├── cartSlice.js
+│   │   ├── cartUtils.js
+│
+│   ├── checkout/            # Thanh toán
+│   │   ├── CheckoutForm.jsx
+│   │   ├── checkoutService.js
+│   │   └── checkoutSlice.js
+│
+│   ├── userProfile/         # Hồ sơ người dùng, lịch sử đơn hàng
+│   │   ├── Profile.jsx
+│   │   ├── orderService.js
+│   │   └── userSlice.js
+│
+│   └── common/              # Các feature dùng chung như modal, toast, loader
+│       ├── Modal.jsx
+│       ├── Toast.jsx
+│       └── loaderUtils.js
 │   ├── routes/             # Định nghĩa đường dẫn các trang
 │   ├── services/           # Gọi API (axios instance, API functions)
 │   ├── utils/              # Hàm tiện ích (format tiền tệ, validate form, v.v.)

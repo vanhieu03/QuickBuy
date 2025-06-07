@@ -1,21 +1,30 @@
+import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 const Header = () => {
+    //Điều khiển trạng thái đóng mở của khối quảng cáo
+    const [isHidden, setIsHidden] = useState(true);
     return (
-        <div>
+        <div className="fixed top-0 left-0 w-full z-10">
             {/* Ads */}
-            <div className="bg-black">
-                <div className="max-w-xl lg:max-w-7xl mx-auto flex items-center justify-center relative text-white ">
-                    <div className="px-2 py-2 text-xs md:text-base">
-                        <span>Sign up and get 20% off to your first order. </span>
-                        <a href="#" className="underline">Sign Up Now</a>
+            {isHidden &&
+                <div className="bg-black">
+                    <div className="max-w-xl lg:max-w-7xl mx-auto flex items-center justify-center relative text-white ">
+                        <div className="px-2 py-2 text-xs md:text-base">
+                            <span>Sign up and get 20% off to your first order. </span>
+                            <a href="#" className="underline">Sign Up Now</a>
+                        </div>
+                        <div className="md:block hidden absolute top-0 right-0 translate-y-1/2">
+                            <IoClose
+                                onClick={() => setIsHidden(false)}
+                                className="w-5 h-5 cursor-pointer hover:opacity-60" />
+                        </div>
                     </div>
-                    <div className="md:block hidden absolute top-0 right-0 translate-y-1/2"><IoClose className="w-5 h-5 cursor-pointer hover:opacity-60" /></div>
                 </div>
-            </div>
+            }
             {/* Main header */}
             <div className='bg-white px-4'>
                 <div className="max-w-xl lg:max-w-7xl py-6 mx-auto flex items-center justify-between space-x-3 sm:space-x-15 lg:space-x-30">
