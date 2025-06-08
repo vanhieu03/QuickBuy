@@ -1,8 +1,8 @@
-import Banner from "../components/Banner"
-import Brand from "../components/Brand"
-import Header from "../components/Header"
-import ProductsList from "../components/ProductsList"
-import StyleCategoryList from "../components/StyleCategoryList"
+import Banner from "../components/home/Banner"
+import Brand from "../components/home/Brand"
+import Header from "../components/home/Header"
+import ProductsList from "../components/products/ProductsList"
+import StyleCategoryList from "../components/home/StyleCategoryList"
 
 const Home = () => {
   return (

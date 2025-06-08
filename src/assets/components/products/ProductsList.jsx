@@ -1,4 +1,4 @@
-import { useProduct } from "../features/ProductContext"
+import { useProduct } from "../../features/ProductContext"
 import Products from "./Products";
 
 const ProductsList = ({ title }) => {

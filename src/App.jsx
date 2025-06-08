@@ -1,8 +1,8 @@
 import {Routes, Route} from "react-router-dom"
-import Header from "./assets/components/Header";
+import Header from "./assets/components/home/Header";
 import Home from "./assets/pages/Home";
-import Subscribe from "./assets/components/Subscribe"
-import Footer from "./assets/components/Footer"
+import Subscribe from "./assets/components/home/Subscribe"
+import Footer from "./assets/components/home/Footer"
 
 function App() {
 
