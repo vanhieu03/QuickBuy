@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -29,7 +30,9 @@ const Header = () => {
             <div className='bg-white px-4'>
                 <div className="max-w-xl lg:max-w-7xl py-4 sm:py-6 mx-auto flex items-center justify-between space-x-3 sm:space-x-15 lg:space-x-30">
                     {/* Logo */}
-                    <div className="text-4xl text-black uppercase font-bold">TECH SHOP</div>
+                    <div className="text-4xl text-black uppercase font-bold">
+                        <Link to='/home'>TECH SHOP</Link>
+                    </div>
                     {/* Thanh tìm kiếm */}
                     <div
                         className="hidden sm:flex items-center space-x-2 px-4 py-3 rounded-full bg-[#F2F0F1] flex-1 border-2 border-transparent focus-within:border-black"
