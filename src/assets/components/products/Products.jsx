@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom"
 
-
-const Products = ({img, title, price}) => {
+const Products = ({img, title, price, id}) => {
   
   return (
-    <>
+    <Link to={`/productdetail/${id}`}>
       {/* Ảnh */}
       <div className="h-72 mb-4">
         <img src={img} alt="" className="w-full h-full rounded-xl object-cover" />
@@ -16,7 +16,7 @@ const Products = ({img, title, price}) => {
         <div className="font-medium text-lg">${price}</div>
       </div>
       
-    </>
+    </Link>
   )
 }
 

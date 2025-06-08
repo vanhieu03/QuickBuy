@@ -1,6 +1,5 @@
 import Banner from "../components/home/Banner"
 import Brand from "../components/home/Brand"
-import Header from "../components/home/Header"
 import ProductsList from "../components/products/ProductsList"
 import StyleCategoryList from "../components/home/StyleCategoryList"
 

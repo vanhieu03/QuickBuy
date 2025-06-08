@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 const Header = () => {
+    const isHome = useLocation().pathname === '/';
     //Điều khiển trạng thái đóng mở của khối quảng cáo
     const [isHidden, setIsHidden] = useState(true);
     return (
@@ -28,10 +29,10 @@ const Header = () => {
             }
             {/* Main header */}
             <div className='bg-white px-4'>
-                <div className="max-w-xl lg:max-w-7xl py-4 sm:py-6 mx-auto flex items-center justify-between space-x-3 sm:space-x-15 lg:space-x-30">
+                <div className={`max-w-xl lg:max-w-7xl py-4 sm:py-6 mx-auto flex items-center justify-between space-x-3 sm:space-x-15 lg:space-x-30 ${isHome ? '' : 'border-b-1 border-gray-200'}`}>
                     {/* Logo */}
                     <div className="text-4xl text-black uppercase font-bold">
-                        <Link to='/home'>TECH SHOP</Link>
+                        <Link to='/'>TECH SHOP</Link>
                     </div>
                     {/* Thanh tìm kiếm */}
                     <div

@@ -1,6 +1,7 @@
 import {createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
+//Component tạo Context để truyền dữ liệu khi gọi api đi toàn trang
 //Tạo context
 const ProductContext  = createContext();
 
