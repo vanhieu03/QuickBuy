@@ -35,7 +35,10 @@ const images = [
 const Brand = () => {
     return (
         <div className='bg-black'>
-            <Carousel responsive={responsive} className='max-w-xl lg:max-w-7xl mx-auto'>
+            <Carousel
+                responsive={responsive}
+                containerClass='relative z-10'
+                className='max-w-xl lg:max-w-7xl mx-auto'>
                 {images.map((img, index) => (
                     <div key={index} className='py-10 flex justify-center'>
                         <img src={img.src} alt={img.alt} className='w-[144px] h-[40px]' />

@@ -9,7 +9,7 @@ const Banner = () => {
                     <h1 className="text-4xl lg:text-6xl font-black lg:pr-10 pr-4 mb-8">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
                     <div className="text-sm lg:text-base mb-8">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</div>
                     <button className="text-white bg-black rounded-full px-10 py-3 mb-8 lg:w-auto w-full">Shop Now</button>
-                    <ul className="flex flex-wrap items-center justify-center lg:justify-start">
+                    <ul className="flex flex-wrap items-center justify-center lg:justify-start pb-4">
                         <li className='border-r-1 border-gray-300 pr-4'>
                             <div className='flex items-center space-x-1 font-bold'>
                                 <span className='text-4xl'>200</span>
@@ -17,7 +17,7 @@ const Banner = () => {
                             </div>
                             <div className='text-sm sm:text-base opacity-60'>International Brands</div>
                         </li>
-                        <li className='border-r-1 border-gray-300 px-4'>
+                        <li className='sm:border-r-1 sm:border-gray-300 pl-4 sm:pr-4 sm:mb-0 mb-2'>
                             <div className='flex items-center space-x-1 font-bold'>
                                 <span className='text-4xl'>2,000</span>
                                 <FaPlus />

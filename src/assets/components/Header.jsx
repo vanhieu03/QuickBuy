@@ -8,7 +8,7 @@ const Header = () => {
     //Điều khiển trạng thái đóng mở của khối quảng cáo
     const [isHidden, setIsHidden] = useState(true);
     return (
-        <div className="fixed top-0 left-0 w-full z-10">
+        <div className="fixed top-0 left-0 w-full z-50">
             {/* Ads */}
             {isHidden &&
                 <div className="bg-black">
@@ -27,12 +27,12 @@ const Header = () => {
             }
             {/* Main header */}
             <div className='bg-white px-4'>
-                <div className="max-w-xl lg:max-w-7xl py-6 mx-auto flex items-center justify-between space-x-3 sm:space-x-15 lg:space-x-30">
+                <div className="max-w-xl lg:max-w-7xl py-4 sm:py-6 mx-auto flex items-center justify-between space-x-3 sm:space-x-15 lg:space-x-30">
                     {/* Logo */}
-                    <div className="font-bold text-2xl text-black">LOGO</div>
+                    <div className="text-4xl text-black uppercase font-bold">TECH SHOP</div>
                     {/* Thanh tìm kiếm */}
                     <div
-                        className="flex items-center space-x-2 px-4 py-3 rounded-full bg-[#F2F0F1] flex-1 border-2 border-transparent focus-within:border-black"
+                        className="hidden sm:flex items-center space-x-2 px-4 py-3 rounded-full bg-[#F2F0F1] flex-1 border-2 border-transparent focus-within:border-black"
                     >
                         <button><IoSearch className="w-5 h-5 text-black opacity-40 active:opacity-60" /></button>
                         <input
