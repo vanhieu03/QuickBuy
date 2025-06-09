@@ -5,6 +5,7 @@ import Subscribe from "./assets/components/home/Subscribe"
 import Footer from "./assets/components/home/Footer"
 import ProductDetail from "./assets/pages/ProductDetail";
 import ScrollToTop from "./assets/features/ScrollToTop";
+import ProductsAll from "./assets/pages/ProductsAll";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/productdetail/:id" element={<ProductDetail />}/>
+        <Route path="/productsall" element={<ProductsAll />}/>
       </Routes>
       {/* Footer */}
       <div className="relative bg-[#F0F0F0] lg:mt-30 mt-50">

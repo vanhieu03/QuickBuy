@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; 
 import { useProduct } from "../../features/ProductContext"
 import Products from "./Products";
 
@@ -22,7 +23,7 @@ const ProductsList = ({ title }) => {
                     )}
                 </div>
                 <div className="text-center py-12">
-                    <a href="#" className="rounded-full px-20 py-4 border-1 border-gray-300 text-base">View All</a>
+                    <Link to="/productsall" className="rounded-full px-20 py-4 border-1 border-gray-300 text-base">View All</Link>
                 </div>
             </div>
         </div>

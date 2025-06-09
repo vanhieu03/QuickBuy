@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import banner from '/woman.webp'
 import { FaPlus } from "react-icons/fa";
 const Banner = () => {
@@ -8,7 +9,9 @@ const Banner = () => {
                 <div className="text-black lg:w-1/2 lg:mt-0 pt-4">
                     <h1 className="text-4xl lg:text-6xl font-black lg:pr-10 pr-4 mb-8">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
                     <div className="text-sm lg:text-base mb-8">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</div>
-                    <button className="text-white bg-black rounded-full px-10 py-3 mb-8 lg:w-auto w-full">Shop Now</button>
+                    <button className="text-white bg-black rounded-full px-10 py-3 mb-8 lg:w-auto w-full">
+                        <Link to="/productsall">Shop Now</Link>
+                    </button>
                     <ul className="flex flex-wrap items-center justify-center lg:justify-start pb-4">
                         <li className='border-r-1 border-gray-300 pr-4'>
                             <div className='flex items-center space-x-1 font-bold'>

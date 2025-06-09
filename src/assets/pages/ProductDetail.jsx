@@ -21,7 +21,7 @@ const ProductDetail = () => {
   //Biến quản lý xem ảnh
   const [readImg, setReadImg] = useState(0);
   //Biến trạng thái bật tắt fixed khi ấn vào ảnh
-  const [turn, setTurn] = useState(false);
+  const [turn, setTurn] = useState();
   const fetchDetail = async () => {
     try {
       setLoading(true);
@@ -33,13 +33,12 @@ const ProductDetail = () => {
       );
       setDetail(res.data);
       setRelated(res1.data)
-      console.log(res1)
     }
     catch (er) {
       if (er.response && er.response.status === 404) {
-        setError("Sản phẩm không tồn tại.");
+        setError(true);
       } else {
-        setError("Đã xảy ra lỗi khi tải sản phẩm.");
+        setError(true);
       }
     }
     finally {
@@ -49,17 +48,29 @@ const ProductDetail = () => {
   useEffect(() => {
     fetchDetail();
   }, [id])
+  useEffect(() => {
+    if (turn) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Cleanup để tránh lỗi khi rời trang
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [turn]);
   return (
     <div className="pt-[140px] px-4">
       <div className="max-w-xl lg:max-w-7xl mx-auto py-8">
         {/* Nav */}
-        <div className="flex items-center gap-2 lg:text-lg text-base">
+        <div className="flex items-center gap-2 lg:text-base text-sm">
           <Link to="/" className="opacity-60">Home</Link>
           <img className="h-[10px] w-[10px] object-contain opacity-60" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/dd5cbafaee315c6c99f4.svg" alt="" />
           <div className="opacity-100">{detail.title}</div>
         </div>
         {/* Detail */}
-        <div className="py-10 border-b-1 border-gray-300">
+        <div className="pt-8 pb-10 border-b-1 border-gray-300">
           {loading ? (<div>Đang load</div>)
             : error ? (<div>Không tìm thấy sản phẩm</div>)
               : (
@@ -168,9 +179,9 @@ const ProductDetail = () => {
               )
           }
         </div>
-        <div className="py-8">
+        <div className="pt-8">
           <h1 className="font-black text-4xl uppercase text-center">You might also like</h1>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 py-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
             {Array.from(related).slice(0, 4).map(item =>
               <div key={item.id}>
                 <Products
